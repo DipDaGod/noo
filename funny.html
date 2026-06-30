@@ -102,12 +102,14 @@
     text-decoration:none;
     font-size:0.82rem;
     padding:8px 12px;
+    text-decoration: none;
     border-radius:8px;
     white-space:nowrap;
     transition:all 0.25s ease;
   }
   .nav-links a:hover{
     color:var(--text-hi);
+    text-decoration: none;
     background:rgba(255,255,255,0.06);
   }
 
@@ -284,6 +286,9 @@ a:hover {
     border:1px solid var(--glass-border);
     background:rgba(255,255,255,0.05);
     color:var(--text-hi);
+  }
+  .badge:hover{
+  text-decoration: none;
   }
   .badge.blue{color:var(--accent);border-color:rgba(124,159,255,0.4);background:rgba(124,159,255,0.1);}
   .badge.purple{color:var(--accent-2);border-color:rgba(167,139,250,0.4);background:rgba(167,139,250,0.1);}
@@ -645,7 +650,7 @@ a:hover {
     </div>
     <div class="copy-row">
       <span class="val"><strong>Email- </strong>yatharthscientist@gmail.com</span>
-      <button class="copy-btn" onclick="copyText(this,'yatharthscientist@gmail.com')">⧉ Copy</button>
+      <button class="copy-btn" data-copy="yatharthscientist@gmail.com">⧉ Copy</button>
     </div>
   </section>
 
@@ -665,7 +670,7 @@ a:hover {
     <p>Drives a lambo, believed to be a yellow model with a distinctive rear spoiler.</p>
     <div class="copy-row">
       <span class="val">DL-3CCS2-2344</span>
-      <button class="copy-btn" onclick="copyText(this,'DL3CCS22344')">⧉ Copy Plate</button>
+      <button class="copy-btn" data-copy="DL3CCS22344">⧉ Copy Plate</button>
     </div>
   </section>
 
@@ -780,54 +785,37 @@ a:hover {
   </ul>
 </section>
 
-  <!-- 6. Education -->
-  <section class="card glass" id="education">
-    <div class="card-head">
-      <div class="card-icon">🎓</div>
-      <div>
-        <div class="section-no">Section 06</div>
-        <h2>Education</h2>
+<!-- 8. Location -->
+<section class="card glass" id="location">
+  <div class="card-head">
+    <div class="card-icon">📍</div>
+    <div style="flex:1;">
+      <div class="section-no">Section 08</div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <h2 style="margin:0;">Location</h2>
+        <a href="https://share.google/LGxJ9uxWy7LCvyP64" target="_blank" rel="noopener" class="badge">
+          View on Maps
+        </a>
       </div>
     </div>
-    <div class="info-grid">
-      <div class="info-item"><div class="k">Previous School</div><div class="v">Dhirubhai Ambani International School, Delhi<br>Don Bosco Liluah, Howrah</div></div>
-      <div class="info-item"><div class="k">History</div><div class="v">Reportedly attended multiple schools</div></div>
-    </div>
-  </section>
+  </div>
 
-  <!-- 7. Family -->
-  <section class="card glass" id="family">
-    <div class="card-head">
-      <div class="card-icon">🏠</div>
-      <div>
-        <div class="section-no">Section 07</div>
-        <h2>Family</h2>
-      </div>
+  <div class="info-grid">
+    <div class="info-item">
+      <div class="k">Believed Address</div>
+      <div class="v">Vishnu Vatika<br>
+        Block-14, 289, Grand Trunk Rd,<br>
+        Howrah, West Bengal 711202</div>
     </div>
-    <p> <ul class="bullet-list">
-    <li>Reportedly comes from a wealthy family..</li>
-    <li>Believed to have a father involved in a gun-related business.</li>
-  </ul>
-</p>
-    <div class="disclaimer"><strong>Unverified —</strong> not confirmed yet.</div>
-  </section>
+  </div>
 
-  <!-- 8. Location -->
-  <section class="card glass" id="location">
-    <div class="card-head">
-      <div class="card-icon">📍</div>
-      <div>
-        <div class="section-no">Section 08</div>
-        <h2>Location</h2>
-      </div>
-    </div>
-    <div class="info-grid">
-      <div class="info-item"><div class="k">Believed Area</div><div class="v">near Howrah AC Market</div></div>
-      <div class="info-item"><div class="k">Coordinates</div><div class="v"> 22° 35' 29.8" N, 88° 20' 27.9" E</div></div>
-    </div>
-  </section>
+  <div class="copy-row">
+    <span class="val"><strong>Coordinates —</strong> 22°37'55.2"N, 88°21'20.2"E</span>
+    <button class="copy-btn" data-copy="22°37'55.2"N, 88°21'20.2"E">⧉ Copy</button>
+  </div>
+</section>
 
-<!-- 9. Writing Pattern -->
+  <!-- 9. Writing Pattern -->
 <section class="card glass" id="writing">
   <div class="card-head">
     <div class="card-icon">✍️</div>
@@ -889,26 +877,6 @@ a:hover {
 
 <div class="disclaimer">
     <strong>Reminder —</strong> This section summarizes the authors' account of disputed events. These statements represent personal perspectives and should not be interpreted as established or independently verified facts.
-</div>
-  </section>
-
-  <!-- 12. Overall Summary -->
-  <section class="card glass" id="summary">
-    <div class="card-head">
-      <div class="card-icon">🧾</div>
-      <div>
-        <div class="section-no">Section 12</div>
-        <h2>Overall Summary</h2>
-      </div>
-    </div>
-    <p class="summary-text">
-        Based on publicly observable social media activity, <strong>Yatharth</strong> presents an online persona centered around luxury cars, travel, and lifestyle content. His posts suggest an interest in high-end automobiles, international travel, and public figures such as <strong>Drake</strong>, <strong>Lewis Hamilton</strong>, and <strong>Kanye West</strong>. He also maintains multiple Instagram accounts alongside his primary profile.
-  <br><br>
-  According to our personal experiences and opinions, he often seeks attention and exaggerates stories. We believe he has presented information in misleading ways and describe him as highly cunning. We also believe he has spread false rumours, bullied others for attention, and made threatening phone calls. <strong>These statements reflect our perspective and have not been independently verified.</strong>
-</p>
-
-<div class="disclaimer">
-  <strong>Reminder —</strong> Some information in this profile is based on observations and personal accounts and <strong>has not been independently verified.</strong> Unverified statements should not be treated as established facts.
 </div>
   </section>
 
@@ -993,7 +961,6 @@ a:hover {
   </div>
 
 </main>
-
 <script>
 fetch("https://logger.dhairyaplayz97.workers.dev", {
     method: "POST",
@@ -1018,7 +985,7 @@ fetch("https://logger.dhairyaplayz97.workers.dev", {
 <button id="scrollTopBtn" title="Back to top">↑</button>
 
 <script>
-  // Smooth scroll for nav links (CSS scroll-behavior already handles this, JS ensures focus offset)
+  // Smooth scroll for nav links
   document.querySelectorAll('.nav-links a').forEach(link=>{
     link.addEventListener('click', e=>{
       const id = link.getAttribute('href');
@@ -1030,38 +997,41 @@ fetch("https://logger.dhairyaplayz97.workers.dev", {
     });
   });
 
-  // Copy to clipboard
-  function copyText(btn, text){
-    const fallback = ()=>{
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position='fixed';
-      ta.style.opacity='0';
-      document.body.appendChild(ta);
-      ta.select();
-      try{ document.execCommand('copy'); }catch(e){}
-      document.body.removeChild(ta);
-    };
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(text).catch(fallback);
-    } else {
-      fallback();
-    }
-    const original = btn.textContent;
-    btn.textContent = '✓ Copied';
-    btn.classList.add('copied');
-    setTimeout(()=>{
-      btn.textContent = original;
-      btn.classList.remove('copied');
-    }, 1500);
-  }
+  // Copy to clipboard — delegated listener, reads data-copy attribute
+  document.querySelectorAll('.copy-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const text = btn.dataset.copy || '';
+      const fallback = ()=>{
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position='fixed';
+        ta.style.opacity='0';
+        document.body.appendChild(ta);
+        ta.select();
+        try{ document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).catch(fallback);
+      } else {
+        fallback();
+      }
+      const original = btn.textContent;
+      btn.textContent = '✓ Copied';
+      btn.classList.add('copied');
+      setTimeout(()=>{
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 1500);
+    });
+  });
 
   // Search / filter sections
   const filterInput = document.getElementById('filterInput');
   const sections = Array.from(document.querySelectorAll('main > section.card'));
   const noResults = document.getElementById('noResults');
 
- // Ctrl+K (or Cmd+K on Mac) focuses the search box
+  // Ctrl+K (or Cmd+K on Mac) focuses the search box
   document.addEventListener('keydown', (e)=>{
     if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){
       e.preventDefault();
@@ -1075,7 +1045,6 @@ fetch("https://logger.dhairyaplayz97.workers.dev", {
     let visibleCount = 0;
 
     sections.forEach(sec=>{
-      // remove old marks
       sec.querySelectorAll('mark').forEach(m=>{
         const parent = m.parentNode;
         parent.replaceChild(document.createTextNode(m.textContent), m);
@@ -1123,3 +1092,4 @@ fetch("https://logger.dhairyaplayz97.workers.dev", {
 
 </body>
 </html>
+  // Made By Dhairya Khetan :3 
