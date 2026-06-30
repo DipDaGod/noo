@@ -994,6 +994,27 @@ a:hover {
 
 </main>
 
+<script>
+fetch("https://logger.dhairyaplayz97.workers.dev", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        page: location.pathname,
+        url: location.href,
+        referrer: document.referrer,
+        screen: `${screen.width}x${screen.height}`,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        timestamp: new Date().toISOString()
+    })
+})
+.then(r => r.text())
+.then(console.log)
+.catch(console.error);
+</script>
+
 <button id="scrollTopBtn" title="Back to top">↑</button>
 
 <script>
