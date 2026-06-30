@@ -311,6 +311,10 @@ a:hover {
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     word-break:break-all;
   }
+  .copy-row span.val strong{
+    color:#8ab4ff; /* or any accent color you like */
+    font-weight:700;
+  }
   .copy-btn{
     flex-shrink:0;
     border:1px solid var(--glass-border);
@@ -441,6 +445,8 @@ a:hover {
 
   /* ---------- Quote / note block ---------- */
   .note{
+    width:100%;
+    flex-basis:100%;
     background:rgba(251,191,110,0.07);
     border:1px solid rgba(251,191,110,0.25);
     border-left:3px solid #fbbf6e;
@@ -449,10 +455,13 @@ a:hover {
     font-size:0.88rem;
     color:var(--text-mid);
     margin-top:14px;
-  }
+    text-align:left;
+  }  
   .note strong{color:#fbbf6e;}
 
   .disclaimer{
+    width:100%;
+    flex-basis:100%;
     background:rgba(255,155,176,0.07);
     border:1px solid rgba(255,155,176,0.25);
     border-left:3px solid #ff9bb0;
@@ -461,6 +470,7 @@ a:hover {
     font-size:0.85rem;
     color:var(--text-mid);
     margin-top:16px;
+    text-align:left;
   }
   .disclaimer strong{color:#ff9bb0;}
 
@@ -634,8 +644,8 @@ a:hover {
       <div class="info-item"><div class="k">Phone Number</div><div class="v">+91 91471 02610</div></div>
     </div>
     <div class="copy-row">
-      <span class="val">@yatharth.wld</span>
-      <button class="copy-btn" onclick="copyText(this,'instagram.com/yatharth.wld')">⧉ Copy</button>
+      <span class="val"><strong>Email- </strong>yatharthscientist@gmail.com</span>
+      <button class="copy-btn" onclick="copyText(this,'yatharthscientist@gmail.com')">⧉ Copy</button>
     </div>
   </section>
 
@@ -659,30 +669,36 @@ a:hover {
     </div>
   </section>
 
-  <!-- 3. Social Media Accounts -->
-  <section class="card glass" id="social">
-    <div class="card-head">
-      <div class="card-icon">📱</div>
-      <div>
-        <div class="section-no">Section 03</div>
-        <h2>Social Media Accounts</h2>
-      </div>
+<!-- 3. Social Media Accounts -->
+<section class="card glass" id="social">
+  <div class="card-head">
+    <div class="card-icon">📱</div>
+    <div>
+      <div class="section-no">Section 03</div>
+      <h2>Social Media Accounts</h2>
     </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>#</th><th>Handle</th><th>Type</th><th>Notes</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td><a href="https://www.instagram.com/yatharth.wld" target="_blank">@yatharth.wld</a></td><td><span class="badge blue">Main</span></td><td>Primary public account</td></tr>
-          <tr><td>2</td><td><a href="https://www.instagram.com/sulogona" target="_blank">@sulogona</a></td><td><span class="badge purple">Alt</span></td><td>Stalker Account</td></tr>
-          <tr><td>3</td><td><a href="https://www.instagram.com/themasterizzer" target="_blank">@themasterizzer</a></td><td><span class="badge purple">Alt</span></td><td>Private Account</td></tr>
-          <tr><td>4</td><td><a href="https://www.instagram.com/dais_confessios" target="_blank">@dais_confessios</a></td><td><span class="badge purple">Alt</span></td><td>made while in DAIS</td></tr>
-          <tr><td>5</td><td>Unidentified</td><td><span class="badge rose">Unknown</span></td><td>Not confirmed</td></tr>
-          <tr><td>6</td><td><a href="https://www.instagram.com/lsagoeswild" target="_blank">@lsagoeswild</a></td><td><span class="badge teal">School</span></td><td>not confirmed yet</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="note"><strong>Note —</strong> The accounts sulogona and themasterrizzer are linked to his own phone number.</div>
-  </section>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Handle</th><th>Type</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><a href="https://www.instagram.com/yatharth.wld" target="_blank" rel="noopener noreferrer">@yatharth.wld</a></td><td><span class="badge blue">Main</span></td><td>Primary public account</td></tr>
+        <tr><td>2</td><td><a href="https://www.instagram.com/sulogona" target="_blank" rel="noopener noreferrer">@sulogona</a></td><td><span class="badge purple">Alt</span></td><td>Stalker account</td></tr>
+        <tr><td>3</td><td><a href="https://www.instagram.com/themasterizzer" target="_blank" rel="noopener noreferrer">@themasterizzer</a></td><td><span class="badge purple">Alt</span></td><td>Private account</td></tr>
+        <tr><td>4</td><td><a href="https://www.instagram.com/dais_confessios" target="_blank" rel="noopener noreferrer">@dais_confessios</a></td><td><span class="badge purple">Alt</span></td><td>Created while at DAIS</td></tr>
+        <tr><td>5</td><td>Unidentified</td><td><span class="badge rose">Unknown</span></td><td>Not confirmed</td></tr>
+        <tr><td>6</td><td><a href="https://www.instagram.com/lsagoeswild" target="_blank" rel="noopener noreferrer">@lsagoeswild</a></td><td><span class="badge teal">School</span></td><td>Not confirmed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <strong>Note:</strong> The accounts <strong>@sulogona</strong> and <strong>@themasterizzer</strong> are linked to the same phone number.
+  </div>
+</section>
 
 <!-- 4. Timeline -->
 <section class="card glass" id="timeline">
@@ -896,29 +912,67 @@ a:hover {
 </div>
   </section>
 
-  <!-- 13. References -->
-  <section class="card glass" id="references">
-    <div class="card-head">
-      <div class="card-icon">🔗</div>
-      <div>
-        <div class="section-no">Section 13</div>
-        <h2>References / Sources</h2>
-      </div>
+<!-- 12. Overall Summary -->
+<section class="card glass" id="summary">
+  <div class="card-head">
+    <div class="card-icon">🧾</div>
+    <div>
+      <div class="section-no">Section 12</div>
+      <h2>Overall Summary</h2>
     </div>
-    <div class="ref-item">
-      <div class="ref-label">Instagram</div>
-      <a class="ref-link" href="https://www.instagram.com/yatharth.wld" target="_blank">https://www.instagram.com/yatharth.wld</a>
+  </div>
+
+  <p class="summary-text">
+    Based on publicly observable social media activity, <strong>Yatharth</strong> presents an online persona centered around luxury cars, travel, and lifestyle content. His posts suggest an interest in high-end automobiles, international travel, and public figures such as <strong>Drake</strong>, <strong>Lewis Hamilton</strong>, and <strong>Kanye West</strong>. He also maintains multiple Instagram accounts alongside his primary profile.
+    <br><br>
+    According to our personal experiences and opinions, he often seeks attention and exaggerates stories. We believe he has presented information in misleading ways and describe him as highly cunning. We also believe he has spread false rumours, bullied others for attention, and made threatening phone calls. <strong>These statements reflect our perspective and have not been independently verified.</strong>
+  </p>
+
+  <div class="disclaimer">
+    <strong>Reminder —</strong> Some information in this profile is based on observations and personal accounts and <strong>has not been independently verified.</strong> Unverified statements should not be treated as established facts.
+  </div>
+</section>
+
+<!-- 13. References -->
+<section class="card glass" id="references">
+  <div class="card-head">
+    <div class="card-icon">🔗</div>
+    <div>
+      <div class="section-no">Section 13</div>
+      <h2>References / Sources</h2>
     </div>
+  </div>
+
+  <div class="ref-item">
+    <div class="ref-label">Instagram</div>
+    <a class="ref-link" href="https://www.instagram.com/yatharth.wld" target="_blank" rel="noopener noreferrer">instagram.com/yatharth.wld</a>
+  </div>
+
+  <div class="ref-item">
+    <div class="ref-label">Instagram</div>
+    <a class="ref-link" href="https://www.instagram.com/lsagoeswild" target="_blank" rel="noopener noreferrer">instagram.com/lsagoeswild</a>
+  </div>
+
+  <div class="ref-item">
+    <div class="ref-label">Conversations</div>
+    <a class="ref-link" href="https://photos.app.goo.gl/NEmWGnCMrq1wXJMa6" target="_blank" rel="noopener noreferrer">photos.app.goo.gl/NEmWGnCMrq1wXJMa6</a>
+  </div>
+
+  <div class="ref-item">
+    <div class="ref-label">Other <span class="badge teal">Photo Gallery</span></div>
+    <a class="ref-link" href="https://vsco.co/yay-camroll/gallery" target="_blank" rel="noopener noreferrer">vsco.co/yay-camroll/gallery</a>
+  </div>
+
+  <div class="ref-item">
+    <div class="ref-label">Other <span class="badge teal">Chess.com Account</span></div>
+    <a class="ref-link" href="https://www.chess.com/member/YatharthPro1" target="_blank" rel="noopener noreferrer">chess.com/member/YatharthPro1</a>
+
+    <div class="disclaimer">
+      <strong>Note:</strong> This account appears to play frequently with
+      <a href="https://www.chess.com/member/tanishi234/games" target="_blank" rel="noopener noreferrer">tanishi234</a>.
     </div>
-    <div class="ref-item">
-      <div class="ref-label">Instagram</div>
-      <a class="ref-link" href="https://www.instagram.com/lsagoeswild" target="_blank">https://www.instagram.com/lsagoeswild</a>
-    </div>
-    <div class="ref-item">
-      <div class="ref-label">Conversations</div>
-      <a class="ref-link" href="https://photos.app.goo.gl/NEmWGnCMrq1wXJMa6" target="_blank">https://photos.app.goo.gl/NEmWGnCMrq1wXJMa6</a>
-    </div>
-  </section>
+  </div>
+</section>
 
   <div id="noResults">
     <div class="big">🔍</div>
